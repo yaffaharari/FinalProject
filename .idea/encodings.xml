@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/yaffi/finalproject/DBHandler.java" charset="windows-1255" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/yaffi/finalproject/DBOpenHelper.java" charset="windows-1255" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/yaffi/finalproject/GoogleAccess.java" charset="windows-1255" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/yaffi/finalproject/MyBroadcastReceiver.java" charset="windows-1255" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/yaffi/finalproject/MyContentProvider.java" charset="windows-1255" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/yaffi/finalproject/MyListFragment.java" charset="windows-1255" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/yaffi/finalproject/MyLocationListener.java" charset="windows-1255" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/yaffi/finalproject/MyMainFragment.java" charset="windows-1255" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/yaffi/finalproject/MyMapFragment.java" charset="windows-1255" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/yaffi/finalproject/MyService.java" charset="windows-1255" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/yaffi/finalproject/Place.java" charset="windows-1255" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/yaffi/finalproject/PlacesContract.java" charset="windows-1255" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/micon.png" charset="windows-1255" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/item_fragment.xml" charset="windows-1255" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/list_fragment.xml" charset="windows-1255" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/main_fragment.xml" charset="windows-1255" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/map_fragment.xml" charset="windows-1255" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/menu" charset="windows-1255" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

@@ -1,0 +1,13 @@
+<resources>
+
+    <string name="app_name">FinalProject</string>
+
+    <string name="search_placeId"/>
+    <string name="tSearch">Search Place</string>
+
+    <string name="favouriteId"/>
+    <string name="tFavourite">Favourite</string>
+
+    <string name="recent_searchId"/>
+    <string name="tRecentSearch">Recent Search</string>
+</resources>

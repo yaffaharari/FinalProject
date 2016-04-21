@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchET"
+        android:layout_gravity="center_horizontal|top" />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="search aroud me"
+        android:id="@+id/cbId"
+        android:layout_gravity="left|center_vertical"
+        android:checked="false" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="77dp"
+        android:text="search"
+        android:id="@+id/searchBtn"
+        android:layout_gravity="right|center_vertical"
+        android:onClick="SearchClick" />
+</LinearLayout>

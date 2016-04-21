@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/search_placeId"
+        android:icon="@drawable/micon"
+        android:title="@string/tSearch"
+        />
+
+    <item android:id="@+id/favouriteId"
+        android:icon="@drawable/micon"
+        android:title="@string/tFavourite"
+        />
+    <item android:id="@+id/recent_searchId"
+        android:icon="@drawable/micon"
+        android:title="@string/tRecentSearch"
+        />
+</menu>
