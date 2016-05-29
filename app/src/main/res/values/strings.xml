@@ -2,12 +2,21 @@
 
     <string name="app_name">FinalProject</string>
 
-    <string name="search_placeId"/>
+    <string name="search_placeId" />
     <string name="tSearch">Search Place</string>
 
-    <string name="favouriteId"/>
-    <string name="tFavourite">Favourite</string>
+    <string name="favouriteId" />
+    <string name="tFavourite">favourite</string>
+    <!--/////////////////////-->
+    <string name="addItemToFav" />
+    <string name="tAddItemToFav">add to favorate</string>
 
-    <string name="recent_searchId"/>
-    <string name="tRecentSearch">Recent Search</string>
+    <string name="sharePlaceWithId" />
+    <string name="tSharePlaceWith">share place with</string>
+
+     <string name="no_location_detected">
+        No location detected. Make sure location is enabled on the device.
+    </string>
+    <string name="daleteAllFav">delete all favourite</string>
+    <string name="exit">Exit</string>
 </resources>

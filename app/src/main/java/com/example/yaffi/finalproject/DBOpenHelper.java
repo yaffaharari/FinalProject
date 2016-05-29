@@ -22,7 +22,9 @@ public class DBOpenHelper extends SQLiteOpenHelper {
                         + PlacesContract.Places.DISTANCE + " REAL ,"
                         + PlacesContract.Places.LOCATION + " TEXT ,"
                         + PlacesContract.Places.PHOTO_URL + " TEXT ,"
-                        + PlacesContract.Places.PICTURE + " TEXT "
+                        + PlacesContract.Places.PICTURE + " TEXT ,"
+                        + PlacesContract.Places.FAVORATE + " TEXT ,"
+                        + PlacesContract.Places.LAST_SEARCH + " INTEGER "
                         + ")";
         db.execSQL(sql);
     }

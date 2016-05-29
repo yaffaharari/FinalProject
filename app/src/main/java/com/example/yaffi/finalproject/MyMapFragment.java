@@ -1,21 +1,19 @@
 package com.example.yaffi.finalproject;
 
 
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.os.Bundle;
-import android.test.suitebuilder.annotation.Suppress;
-import android.view.InflateException;
+import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
+import android.widget.FrameLayout;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
-import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
@@ -35,6 +33,7 @@ public class MyMapFragment extends Fragment implements OnMapReadyCallback {
     String currentName ,currentLocation;
     String [] latLon=new String[maxValue];
     double lat, lon;
+    SupportMapFragment mapFragment;
 
     public static MyMapFragment newInstance(Place p) {
 
@@ -51,8 +50,8 @@ public class MyMapFragment extends Fragment implements OnMapReadyCallback {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-            View v = inflater.inflate(R.layout.map_fragment, container, false);
-            return v;
+        View v = inflater.inflate(R.layout.map_fragment, container, false);
+        return v;
     }
 
     @Override
@@ -68,7 +67,7 @@ public class MyMapFragment extends Fragment implements OnMapReadyCallback {
         latLon=currentLocation.split(",");
         lat=Double.parseDouble(latLon[0]);
         lon=Double.parseDouble(latLon[1]);
-        SupportMapFragment mapFragment=(SupportMapFragment)getChildFragmentManager().findFragmentById(R.id.map);
+        mapFragment=(SupportMapFragment)getChildFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
         //map = ((MapFragment) getFragmentManager().findFragmentById(R.id.map)).getMap();
     }
@@ -82,7 +81,8 @@ public class MyMapFragment extends Fragment implements OnMapReadyCallback {
         MarkerOptions m=new MarkerOptions();
         //CameraUpdate update = CameraUpdateFactory.newLatLngZoom(new LatLng(lat,lon), 15);
         //mGoogleMap.moveCamera(update);
-        mGoogleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(lat,lon),15));
+        mGoogleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(lat, lon), 15));
     }
+
 }
 

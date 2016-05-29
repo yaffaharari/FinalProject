@@ -1,5 +1,7 @@
 package com.example.yaffi.finalproject;
 
+import android.graphics.Bitmap;
+import android.util.Log;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -13,24 +15,26 @@ public class Place {
     private double distans;
     private String urlPic;
     private String strBit;
-
+    private String id;
+    private boolean fav;
+    Double latitude,longitude;
+    private int lastSearchFlag;
     //===========constractor 1=========
     public Place(JSONObject jsonObject){
         try {
+            //this.id=jsonObject.getString("place_id");
             this.name=jsonObject.getString("name");
-            this.address=jsonObject.getString("formatted_address");
-            //JSONObject geometryObj=new JSONObject(jsonObject.getString("geometry"));
-            //JSONObject locationObj=new JSONObject(geometryObj.getString("location"));
-            JSONObject geometryObj=jsonObject.getJSONObject("geometry");
-            JSONObject locationObj=geometryObj.getJSONObject("location");
-            String lat=locationObj.getString("lat");
-            String lng=locationObj.getString("lng");
-            this.location=lat+","+lng;
-            //this.distans=
+            latitude=jsonObject.getJSONObject("geometry").getJSONObject("location").getDouble("lat");
+            longitude=jsonObject.getJSONObject("geometry").getJSONObject("location").getDouble("lng");
+            this.location=String.valueOf(latitude)+","+String.valueOf(longitude);
             JSONArray jsonArrayPhotos=jsonObject.getJSONArray("photos");
             JSONObject photo1 = jsonArrayPhotos.getJSONObject(0);
             String strUrl = photo1.getString("photo_reference");
-            this.urlPic="https://maps.googleapis.com/maps/api/place/photo?maxwidth=100&photoreference=" + strUrl + GoogleAccess.KEY_FOR_SEARCH;
+            this.urlPic="https://maps.googleapis.com/maps/api/place/photo?maxwidth=100&photoreference=" + strUrl + GoogleAccess.API_KEY;
+            this.address=jsonObject.getString("formatted_address");
+            if(this.getAddress()== null){
+                this.address=jsonObject.getString("vicinity");
+            }
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -43,7 +47,6 @@ public class Place {
         this.distans=distans;
         this.urlPic=urlPic;
     }
-
     //============getter & setter=========
     public String getAddress() {
         return address;}
@@ -69,5 +72,26 @@ public class Place {
         return strBit;}
     public void setStrBit(String strBit) {
         this.strBit = strBit;}
+  /*  public String getId() {
+        return id;}
+    public void setId(String id) {
+        this.id = id;}*/
+    public boolean isFav() {
+        return fav;}
+    public void setFav(boolean fav) {
+        this.fav = fav;}
+    public int getLastSearchFlag() {
+        return lastSearchFlag;}
+    public void setLastSearchFlag(int lastSearchFlag) {
+        this.lastSearchFlag = lastSearchFlag;}
     //=======
+
+    //===//==//==//
+    //JSONObject geometryObj=new JSONObject(jsonObject.getString("geometry"));
+    //JSONObject locationObj=new JSONObject(geometryObj.getString("location"));
+    // JSONObject geometryObj=jsonObject.getJSONObject("geometry");
+    //JSONObject locationObj=geometryObj.getJSONObject("location");
+    //String lat=locationObj.getString("lat");
+    //String lng=locationObj.getString("lng");
+    //===//==//==//
 }

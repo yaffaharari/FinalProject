@@ -8,18 +8,30 @@
         android:layout_height="wrap_content"
         android:id="@+id/searchET"
         android:layout_gravity="center_horizontal|top" />
-    <CheckBox
+
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="search aroud me"
-        android:id="@+id/cbId"
-        android:layout_gravity="left|center_vertical"
-        android:checked="false" />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="77dp"
-        android:text="search"
-        android:id="@+id/searchBtn"
-        android:layout_gravity="right|center_vertical"
-        android:onClick="SearchClick" />
+        android:weightSum="100">
+
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="search aroud me"
+            android:id="@+id/cbId"
+            android:layout_gravity="left|center_vertical"
+            android:checked="false"
+            android:layout_weight="30"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="search"
+            android:id="@+id/searchBtn"
+            android:layout_gravity="right|center_vertical"
+            android:onClick="SearchClick"
+            android:layout_weight="50"/>
+    </LinearLayout>
+
 </LinearLayout>

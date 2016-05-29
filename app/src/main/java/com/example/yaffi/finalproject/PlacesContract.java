@@ -17,13 +17,13 @@ public class PlacesContract {
         public static String LOCATION = "location";
         public static String PHOTO_URL = "photoUrl";
         public static String PICTURE = "picture";
+        public static String FAVORATE = "favorate";
+        public static String LAST_SEARCH = "lastSerchee";
 
         public static final int STATUS_DIR = 1;
         public static final int STATUS_ITEM_ID = 2;
 
-        public static final String AUTHORITY = "com.example.yaffi.finalproj";
+        public static final String AUTHORITY = "com.example.yaffi.finalproject";
         public static final Uri CONTENT_URI = Uri.parse("content://" + AUTHORITY + "/" + TABLE_NAME);
     }
-
-
 }
